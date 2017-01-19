@@ -6,8 +6,8 @@ A web app that stores a contact's name, phone number, and address in remote memo
 ## Setup/Installation Requirements
 
 * In your terminal window:
-  * `$ git clone https://github.com/ElysiaAvery/Address-Book` to your Desktop.
-* navigate to the project directory: `$ cd Address-Book`
+  * `$ git clone https://github.com/ElysiaAvery/Address-Book-PHP` to your Desktop.
+* navigate to the project directory: `$ cd Address-Book-PHP`
 * In a new terminal window enter: `$ composer install`
 * In a separate terminal window, navigate to the web folder: `$ cd web`
   * `$ php -S localhost:8000`
