@@ -1,38 +1,39 @@
 <html>
 <head>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='/css/styles.css' type='text/css'>
   <title>Address Book</title>
 </head>
 <body>
-  <h1>Address Book</h1>
-  {% if contacts is not empty %}
-    <p>Your Contacts:</p>
-    <ul>
-      {% for contact in contacts %}
-        <li>{{ contact.getName }}</li>
-        <ul>
-          <li>{{ contact.getPhone }}</li>
-          <li>{{ contact.getAddress }}</li>
-        </ul>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <div class='container'>
+    <h1>Address Book</h1>
+    {% if contacts is not empty %}
+      <p>Your Contacts:</p>
+      <ul>
+        {% for contact in contacts %}
+          <li>{{ contact.getName }}</li>
+          <ul>
+            <li>{{ contact.getPhone }}</li>
+            <li>{{ contact.getAddress }}</li>
+          </ul>
+        {% endfor %}
+      </ul>
+    {% endif %}
 
-  <form action='/contacts' method='post'>
-    <label for='name'>Name: </label>
-    <input id='name' name='name' type='text'>
-    <br>
-    <label for='phone'>Phone Number: </label>
-    <input id='phone' name='phone' type='number'>
-    <br>
-    <label for='address'>Address: </label>
-    <input id='address' name='address' type='text'>
-    <br>
-    <button class='btn btn-success' type='submit'>Add Contact</button>
-  </form>
-  <form action='/delete_contacts' method='post'>
-    <button type='submit'>Clear Contacts</button>
-  </form>
+    <form action='/contacts' method='post'>
+      <label for='name'>Name: </label>
+      <input id='name' name='name' type='text'>
+      <br>
+      <label for='phone'>Phone Number: </label>
+      <input id='phone' name='phone' type='number'>
+      <br>
+      <label for='address'>Address: </label>
+      <input id='address' name='address' type='text'>
+      <br>
+      <button class='btn btn-success' type='submit'>Add Contact</button>
+    </form>
+    <form action='/delete_contacts' method='post'>
+      <button type='submit'>Clear Contacts</button>
+    </form>
+  </div>
 </body>
 </html>
